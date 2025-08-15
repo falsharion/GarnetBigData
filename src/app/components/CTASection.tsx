@@ -28,7 +28,7 @@ const CTASection = () => {
             <p className="text-sm mt-3 mb-6">
              Gain a clear understanding of your business’s data landscape and uncover untapped revenue opportunities worth millions.
             </p>
-            <ul className="text-sm space-y-2 text-left text-green-700 mb-6">
+            <ul className="text-xs space-y-2 text-left text-green-700 mb-6">
               <li>✔ 60-minute, business and data review</li>
               <li>✔ Opportunity blueprint</li>
               <li>✔ Tailored, quick-win recommendations</li>

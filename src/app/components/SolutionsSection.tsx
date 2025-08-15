@@ -123,7 +123,7 @@ const SolutionsSection = () => {
                       <div className="flex items-center justify-between mb-3">
                         <h3 className={`text-xl md:text-2xl font-semibold ${service.buttonColor} `}>{service.title}</h3>
                         {service.badge && (
-                          <span className="px-2 py-1 bg-purple-100 text-purple-700 text-[10px] lg:text-xs font-medium rounded-full">
+                          <span className="px-2 py-1 bg-purple-100 text-purple-700 text-[8px] lg:text-xs font-medium rounded-full">
                             {service.badge}
                           </span>
                         )}
