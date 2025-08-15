@@ -1,7 +1,7 @@
 // app/contact/components/ContactForm.tsx
 'use client';
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import emailjs from '@emailjs/browser';
 import { debounce } from 'lodash-es';
 
@@ -47,6 +47,23 @@ export default function ContactForm() {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
   }, []);
+
+  // Debounced live email validation
+  const debouncedValidateEmail = useMemo(() => 
+    debounce((value: string) => {
+      if (value.trim() && !validateEmail(value)) {
+        setErrors(prev => ({
+          ...prev,
+          email: "Please enter a valid email address",
+        }));
+      } else {
+        setErrors(prev => ({
+          ...prev,
+          email: "",
+        }));
+      }
+    }, 400), 
+  [validateEmail]);
 
   const validateForm = useCallback(() => {
     let valid = true;
@@ -96,8 +113,8 @@ export default function ContactForm() {
     return valid;
   }, [formData, validateEmail]);
 
-  // Debounced handleChange
-  const handleChange = useCallback(debounce(
+  // Instant typing, debounce only for email validation
+  const handleChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
       const { name, value } = e.target;
       setFormData(prev => ({
@@ -105,13 +122,21 @@ export default function ContactForm() {
         [name]: value,
       }));
 
+      // Clear field-specific error on change
       if (errors[name as keyof typeof errors]) {
         setErrors(prev => ({
           ...prev,
           [name]: "",
         }));
       }
-    }, 100), [errors]);
+
+      // Run debounced email check only for email field
+      if (name === "email") {
+        debouncedValidateEmail(value);
+      }
+    },
+    [errors, debouncedValidateEmail]
+  );
 
   const sendToGoogleSheets = useCallback(async (data: typeof formData) => {
     try {
@@ -154,19 +179,17 @@ export default function ContactForm() {
         ...formData
       };
 
-      // Split heavy operations
-      setTimeout(async () => {
-        const result = await emailjs.send(
-          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID',
-          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID',
-          templateParams
-        );
+      // Send email and log to Google Sheets
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID',
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID',
+        templateParams
+      );
       
       await sendToGoogleSheets(formData);
       
       setSubmitted(true);
       setIsSubmitting(false);
-      }, 30000);
 
     } catch (error) {
       console.error('EmailJS error:', error);

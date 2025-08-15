@@ -152,12 +152,12 @@ const HeroSection: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-12">
           {/* Content Section */}
           <AnimatedSection className="flex-1 text-start md:text-left max-w-xl lg:max-w-none">
-            <h1 className="text-4xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-gray-800">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-gray-800">
               Building tomorrow's <br />
               <span className="text-red-800">Data-Driven</span> organization
               today
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-gray-500 max-w-md md:mx-0">
+            <p className="mt-4 text-sm sm:text-lg text-gray-500 max-w-md md:mx-0">
               Empowering enterprises to unlock the full potential of their data
               through actionable strategies.
             </p>

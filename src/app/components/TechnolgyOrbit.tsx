@@ -218,8 +218,8 @@ const TechnologyOrbit = () => {
           </div>
         </div>
 
-        <div className="flex-1 max-w-md">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        <div className="flex-1 px-3 max-w-md">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
             Powered by Industry-Leading Technologies
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed mb-6">

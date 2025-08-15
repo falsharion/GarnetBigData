@@ -9,7 +9,7 @@ export default function BackgroundShapes() {
         width={208}
         height={208}
         className="absolute right-[5%] w-52 h-52"
-        priority={false}
+        priority
       />
       <Image
         src="/Shape2.png"

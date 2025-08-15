@@ -208,7 +208,7 @@ const JourneySection = () => {
         {/* Heading */}
         <div className="text-center mb-16">
           <AnimatedSection>
-            <h2 className="text-3xl pt-10 md:text-5xl font-bold text-gray-800 mb-6">
+            <h2 className="text-2xl sm:text-3xl pt-10 md:text-5xl font-bold text-gray-800 mb-6">
               Your Data{" "}
               <span className="relative inline-block">
                 <span className="text-transparent bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 bg-clip-text">
@@ -217,7 +217,7 @@ const JourneySection = () => {
                 <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 rounded-full transform scale-x-0 animate-underline-expand"></div>
               </span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className=" text-sm sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Our proven 4-step methodology ensures your organization achieves
               sustainable data transformation with measurable business results.
             </p>
@@ -227,7 +227,7 @@ const JourneySection = () => {
         {/* Timeline */}
         <AnimatedSection>
           <div className="max-w-4xl mx-auto mb-16">
-            <h3 className="text-2xl font-bold text-center mb-8 text-gray-800">
+            <h3 className="text-xl sm:text-2xl font-bold text-center mb-8 text-gray-800">
               Data Transformation Timeline
             </h3>
 

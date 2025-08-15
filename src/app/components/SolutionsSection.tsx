@@ -96,13 +96,13 @@ const SolutionsSection = () => {
       <section className="pt-20 pb-10">
         <div className="container mx-auto px-10">
           <AnimatedSection className="text-center mb-16">
-       <h2 className="text-3xl  md:text-4xl pb-4 font-light text-gray-800">
+       <h2 className="text-2xl  md:text-4xl pb-4 font-light text-gray-800">
             Comprehensive Solutions for
             <span className="font-medium  pl-3 bg-gradient-to-r from-red-600 via-orange-500 to-lime-300 bg-clip-text text-transparent">
               Data Success
             </span>
           </h2>
-            <p className="text-gray-600 text-lg leading-7 max-w-xl mx-auto">
+            <p className="text-gray-600 text-sm sm:text-lg leading-7 max-w-xl mx-auto">
               Our proven methodologies transform organizations from data-poor to data-rich, driving real revenue growth and operational excellence.
             </p>
           </AnimatedSection>
@@ -116,7 +116,7 @@ const SolutionsSection = () => {
                   className="bg-white md:px-4 py-8 rounded-xl  transition-shadow duration-300"
                 >
                   <div className="flex items-start space-x-4">
-                    <div className={`p-4 rounded-lg ${service.color} flex-shrink-0`}>
+                    <div className={`p-2 sm:p-4 rounded-lg ${service.color} flex-shrink-0`}>
                       <IconComponent size={32} />
                     </div>
                     <div className="flex-1">
@@ -128,7 +128,7 @@ const SolutionsSection = () => {
                           </span>
                         )}
                       </div>
-                      <p className="text-gray-600 text-lg mb-4 leading-relaxed">
+                      <p className="text-gray-600 text-sm sm:text-lg mb-4 leading-relaxed">
                         {truncateText(service.desc, 100)}
                       </p>
                       <div className="flex items-end justify-start">
@@ -150,15 +150,15 @@ const SolutionsSection = () => {
 
       {/* Modal */}
       {selectedService && (
-        <div className="fixed inset-0 bg-black/80 bg-opacity-0 flex items-center justify-center p-4 z-50">
+        <div className="fixed inset-0 overflow-x-hidden bg-black/80 bg-opacity-0 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-            <div className="p-6 border-b border-gray-200">
+            <div className="py-5 px-4 border-b border-gray-200">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
-                  <div className={`p-3 rounded-lg ${selectedService.color}`}>
+                  <div className={`p-2 sm:p-3 rounded-lg ${selectedService.color}`}>
                     <selectedService.icon size={32} />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-800">{selectedService.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-800">{selectedService.title}</h3>
                 </div>
                 <button
                   onClick={closeModal}
@@ -168,12 +168,12 @@ const SolutionsSection = () => {
                 </button>
               </div>
             </div>
-            <div className="p-6 space-y-6">
+            <div className="p-4 md:p-6 space-y-6">
               <div className="space-y-4">
                 <p className="text-gray-700 leading-relaxed">{selectedService.desc}</p>
               </div>
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h4 className="font-semibold text-gray-800 mb-4 text-lg">Benefits:</h4>
+                <h4 className="font-semibold text-gray-800 mb-4 text-sm md:text-lg">Benefits:</h4>
                 <ul className="text-gray-700 space-y-3">
                   {selectedService.benefits.map((benefit, index) => (
                     <li key={index} className="flex items-start">

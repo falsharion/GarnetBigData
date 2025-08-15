@@ -88,7 +88,7 @@ const LottieAnimation = memo(({ src, title, className = "" }: LottieAnimationPro
 
   if (!src || src.includes("YOUR_")) {
     return (
-      <div className={`bg-white rounded-lg shadow-lg p-6 relative overflow-hidden ${className}`}>
+      <div className={`bg-white rounded-lg shadow-lg sm:p-6 relative overflow-hidden ${className}`}>
         <div className="absolute inset-0 bg-gradient-to-br from-blue-100/50 to-purple-100/50 backdrop-blur-sm"></div>
         <div className="relative z-10 flex items-center justify-center h-64">
           <div className="text-center">
@@ -579,7 +579,7 @@ useEffect(() => {
                       Data Governance
                     </motion.div>
                     <motion.h2 
-                      className="text-3xl font-bold text-gray-800 mb-4"
+                      className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4"
                       initial={{ y: 20, opacity: 0 }}
                       whileInView={{ y: 0, opacity: 1 }}
                       transition={{ delay: 0.3 }}
@@ -655,7 +655,7 @@ useEffect(() => {
                 Training & Culture
               </motion.div>
               <motion.h2 
-                className="text-3xl font-bold text-gray-800 mb-4"
+                className=" text-2xl sm:text-3xl font-bold text-gray-800 mb-4"
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.3 }}
@@ -726,7 +726,7 @@ useEffect(() => {
                 Infrastructure
               </motion.div>
               <motion.h2 
-                className="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
+                className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4"
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.3 }}
@@ -798,7 +798,7 @@ useEffect(() => {
                 Consulting
               </motion.div>
               <motion.h2 
-                className="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
+                className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4"
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.3 }}
@@ -868,7 +868,7 @@ useEffect(() => {
                 Advanced Analytics & Automation
               </motion.div>
               <motion.h2 
-                className="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
+                className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4"
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.3 }}
@@ -976,7 +976,7 @@ useEffect(() => {
               </motion.button>
 
               <div className="space-y-6">
-                <h2 className="text-2xl font-bold text-gray-800">
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-800">
                   {serviceDetails[selectedService].title}
                 </h2>
                 <div className="prose md:text-xl text-gray-600">

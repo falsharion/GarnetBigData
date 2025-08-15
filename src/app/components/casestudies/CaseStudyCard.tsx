@@ -117,7 +117,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
           </div>
 
           <motion.p
-            className="text-red-900 text-xl"
+            className="text-red-900 text-lg"
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.2 }}
             initial={{ opacity: 0 }}

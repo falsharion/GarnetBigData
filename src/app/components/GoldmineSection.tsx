@@ -383,7 +383,6 @@ const LimitedTrainingAnimation: React.FC = () => {
 
 // AI Unreadiness Animation - Using Lottie
 const AIUnreadinessAnimation: React.FC = () => {
-  // Replace this URL with your actual Lottie animation URL
   const lottieUrl = "https://lottie.host/14c383da-df63-412b-96fe-614657a4dc9e/6hoaP1uR0e.json";
   
   const fallbackContent = (
@@ -492,14 +491,14 @@ const GoldmineSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <AnimatedSection className="text-center mb-12">
           <div className="flex items-center justify-center">
-            <h2 className="text-4xl font-light max-w-lg md:max-w-4xl text-gray-800">
+            <h2 className="text-2xl md:text-4xl font-light max-w-lg md:max-w-4xl text-gray-800">
               Your Data is Your Goldmine —
               <span className="font-medium pl-3 bg-gradient-to-r from-red-600 via-orange-500 to-lime-300 bg-clip-text text-transparent">
                 But Are You Mining It?
               </span>
             </h2>
           </div>
-          <p className="mt-4 px-5 text-gray-500 max-w-2xl md:max-w-4xl mx-auto">
+          <p className="mt-4 text-xs md:text-base px-5 text-gray-500 max-w-2xl md:max-w-4xl mx-auto">
             Most organizations are sitting on treasure troves of untapped data
             potential. Siloed departments, inconsistent storage, and limited
             employee data literacy are costing you more than inefficiency —
@@ -508,7 +507,7 @@ const GoldmineSection: React.FC = () => {
         </AnimatedSection>
 
         <div className="flex-col justify-center md:px-6 flex  md:flex-row items-center gap-12 mt-28 mx-6">
-          <div className="w-full md:w-2/3 relative">
+          <div className="w-full  md:w-2/3 relative">
             <AnimatedSection delay={300}>
               <CustomAnimation 
                 slideIndex={currentSlide} 

@@ -24,7 +24,7 @@ export const caseStudiesData: CaseStudy[] = [
       "Decisions around resource allocation and sales strategy, across products, services, customer segments, and time periods should be based solely on data.",
     approach:
       "We designed and implemented an interactive Revenue Tracker Dashboard to help organizations gain clarity on how money flows into the business. The goal was to break down revenue data in a way that allowed leadership to understand what's working, and what's not.",
-    image: "/casestudy1.jpg",
+    image: "/casestudy1.JPG",
     hasTopVector: true,
     solution: [
       "Revenue by Data Source: Integrated multiple revenue streams into a single view.",

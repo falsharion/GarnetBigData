@@ -208,18 +208,18 @@ const StatsSection = () => {
         </motion.div>
       </div>
 
-      <div className="relative container mx-auto px-4 py-12 pb-20 lg:py-20">
+      <div className="relative h-full container mx-auto px-4 py-12 pb-20 lg:py-20">
         {/* Header */}
         <div className="text-center mb-12 lg:mb-7 pt-8 lg:pt-16">
           {/* ... (keep your decorative images the same) */}
           <section>
-            <h2 className="text-3xl lg:text-4xl font-bold text-white leading-tight max-w-4xl mx-auto pt-16 lg:pt-4 px-4">
+            <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight max-w-3xl lg:max-w-4xl mx-auto pt-16 lg:pt-4 px-4">
               Organizations That Invest in Data Culture See{" "}
               <span className="underline text-red-400 decoration-red-200">
                 Real Results
               </span>
             </h2>
-            <p className="mt-4 lg:mt-6 lg:text-lg text-red-100 max-w-3xl mx-auto px-4">
+            <p className="mt-4 text-sm lg:mt-6 lg:text-lg text-red-100 max-w-xl lg:max-w-3xl mx-auto px-4">
               Don't just take our word for it. Here's the measurable impact our
               clients experience when they prioritize data transformation.
             </p>
