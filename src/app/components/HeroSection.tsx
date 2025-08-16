@@ -168,12 +168,6 @@ const HeroSection: React.FC = () => {
               >
                 Unlock Your Data's Potential
               </a>
-              <a
-                href="/contact"
-                className="text-red-800 border-2 border-red-800/60 hover:bg-[#fff0ec] font-medium text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3 rounded-md transition-colors flex-1 sm:flex-none whitespace-nowrap text-center inline-block"
-              >
-                Free Strategy Call
-              </a>
             </div>
           </AnimatedSection>
 

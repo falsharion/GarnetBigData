@@ -2,6 +2,7 @@
 
 import { CalendarDays, ClipboardList } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import Link from "next/link";
 
 const CTASection = () => {
   return (
@@ -22,20 +23,23 @@ const CTASection = () => {
             <div className="bg-[#e8d5d1] rounded-full p-3 mb-4">
               <ClipboardList className="text-[#822d1b]" size={28} />
             </div>
-            <h3 className="text-xl font-semibold ">
+            <h3 className="text-xl font-semibold">
               Start your Data Revenue Assessment
             </h3>
             <p className="text-sm mt-3 mb-6">
-             Gain a clear understanding of your business’s data landscape and uncover untapped revenue opportunities worth millions.
+              Gain a clear understanding of your business's data landscape and uncover untapped revenue opportunities worth millions.
             </p>
             <ul className="text-xs space-y-2 text-left text-green-700 mb-6">
               <li>✔ 60-minute, business and data review</li>
               <li>✔ Opportunity blueprint</li>
               <li>✔ Tailored, quick-win recommendations</li>
             </ul>
-            <button className="bg-[#4c201c] hover:bg-[#3d1a17] text-white text-sm font-medium px-6 py-3 rounded-md transition">
+            <Link 
+              href="/contact" 
+              className="bg-[#4c201c] hover:bg-[#3d1a17] text-white text-sm font-medium px-6 py-3 rounded-md transition"
+            >
               Get your Free Assessment
-            </button>
+            </Link>
           </div>
 
           {/* Strategy Call Card */}
@@ -51,12 +55,17 @@ const CTASection = () => {
             </p>
             <ul className="text-sm space-y-2 text-left text-white mb-6">
               <li>✔ 20-minute consultation</li>
-              <li>✔ Immediate insights </li>
+              <li>✔ Immediate insights</li>
               <li>✔ Clear next-step roadmap</li>
             </ul>
-            <button className="bg-white hover:bg-gray-200 text-[#a13325] text-sm font-medium px-6 py-3 rounded-md transition">
+            <a
+              href="https://calendly.com/garnetbigdata/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white hover:bg-gray-200 text-[#a13325] text-sm font-medium px-6 py-3 rounded-md transition"
+            >
               Schedule Your Call
-            </button>
+            </a>
           </div>
         </AnimatedSection>
       </div>
@@ -65,4 +74,3 @@ const CTASection = () => {
 };
 
 export default CTASection;
-

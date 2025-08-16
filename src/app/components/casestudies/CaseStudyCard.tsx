@@ -111,7 +111,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                <img src="/vector1.png" alt="vector" />
+                <img src="/Vector1.png" alt="vector" />
               </motion.span>
             </motion.h3>
           </div>

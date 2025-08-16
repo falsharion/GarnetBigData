@@ -140,12 +140,13 @@ const StatsSection = () => {
   };
 
    return (
-    <section className="relative min-h-screen bg-red-950 overflow-hidden" ref={containerRef}>
+    <section className="relative min-h-screen flex justify-center items-center bg-red-950 overflow-hidden" ref={containerRef}>
       {/* Diagonal red background stripe */}
-      <div className="absolute inset-0">
+      <div className="absolute md:flex md:justify-center md:items-center inset-0">
+      
         {/* Mobile clip-path*/}
         <motion.div
-          className="absolute w-full h-full bg-gradient-to-r from-red-950 to-red-700 lg:hidden"
+          className="absolute w-full h-full bg-gradient-to-r from-red-950 to-red-700 md:hidden"
           style={{
             clipPath: "polygon(0 5%, 100% 0%, 100% 95%, 0% 100%)",
           }}
@@ -177,9 +178,9 @@ const StatsSection = () => {
 
         {/* Desktop clip-path */}
         <motion.div
-          className="absolute w-full h-[87%] bg-gradient-to-r from-red-950 to-red-700 hidden lg:block"
+          className="absolute w-full h-[87%]  bg-gradient-to-r from-red-950 to-red-700 hidden md:block"
           style={{
-            clipPath: "polygon(0 15%, 100% 0%, 100% 90%, 0% 100%)",
+            clipPath: "polygon(0 15%, 100% 0%, 100% 93%, 0% 100%)",
           }}
           initial={{ opacity: 0 }}
           animate={controls}
@@ -208,12 +209,13 @@ const StatsSection = () => {
         </motion.div>
       </div>
 
-      <div className="relative h-full container mx-auto px-4 py-12 pb-20 lg:py-20">
+      <div className="relative h-full flex justify-center items-center flex-col container mx-auto px-4 py-12 pb-20 lg:py-20">
         {/* Header */}
-        <div className="text-center mb-12 lg:mb-7 pt-8 lg:pt-16">
+        <div className="text-center mb-12 lg:mb-14 pt-8 lg:pt-16">
           {/* ... (keep your decorative images the same) */}
+          
           <section>
-            <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight max-w-3xl lg:max-w-4xl mx-auto pt-16 lg:pt-4 px-4">
+            <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight max-w-3xl lg:max-w-4xl mx-auto pt-16 lg:text-5xl lg:pt-4 px-4">
               Organizations That Invest in Data Culture See{" "}
               <span className="underline text-red-400 decoration-red-200">
                 Real Results
@@ -228,7 +230,7 @@ const StatsSection = () => {
 
         {/* Stats Grid - Responsive layout */}
         <motion.div 
-          className="relative max-w-6xl mx-auto px-4"
+          className="relative  mx-auto px-4"
           variants={containerVariants}
           initial="hidden"
           animate={controls}
@@ -267,13 +269,13 @@ const StatsSection = () => {
           </div>
 
           {/* Tablet and Desktop layout */}
-          <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+          <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-4 gap-4">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
                 custom={index}
-                className={`${index >= 2 ? 'xl:mt-0 md:mt-8' : ''} ${index === 1 ? 'xl:mt-0 md:mt-8' : ''}`}
+                className={`${index >= 2 ? 'xl:mt-0 md:mt-0' : ''} ${index === 1 ? 'xl:mt-0 md:mt-0' : ''}`}
               >
                 <AnimatedSection delay={stat.delay}>
                   <motion.div 

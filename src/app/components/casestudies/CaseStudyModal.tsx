@@ -76,7 +76,7 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
   selectedStudy,
   onClose,
 }) => {
-  return (
+ return (
     <AnimatePresence>
       {selectedStudy && (
         <motion.div
@@ -85,6 +85,7 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.18 }}
+          onClick={onClose} // Add this line
         >
           <motion.div
             className="bg-white rounded-xl max-w-3xl w-full max-h-[90vh] overflow-y-auto"
@@ -92,6 +93,7 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
             transition={{ type: "spring", stiffness: 280, damping: 28 }}
+            onClick={(e) => e.stopPropagation()} // Add this line
           >
             <div className="relative bg-white/80 backdrop-blur-md p-10 max-w-3xl w-full overflow-hidden">
               {/* Background blobs - now behind text */}

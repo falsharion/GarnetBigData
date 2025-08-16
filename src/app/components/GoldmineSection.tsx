@@ -51,15 +51,15 @@ const SLIDES_DATA: Slide[] = [
   },
   {
     title: "Limited Training",
-    subtitle: "A confused employee with data charts, turning into confident one after learning",
-    description: "A confused employee with data charts, turning into confident one after learning",
+    subtitle: "Untrained teams struggle. Adoption stalls. Mistakes multiply. Without the right skills, without continuous, targeted training, productivity sinks and competitors pull ahead.",
+    description: "Untrained teams struggle. Adoption stalls. Mistakes multiply. Without the right skills, without continuous, targeted training, productivity sinks and competitors pull ahead.",
     notification: "Training needed!",
     type: "siloed",
   },
   {
     title: "AI Unreadiness",
     subtitle: "Clock ticking while robots or AI move ahead, organization lags behind",
-    description: "Clock ticking while robots or AI move ahead, organization lags behind",
+    description: "Without the right strategy, data foundation, and skills to leverage artificial intelligence, you watch competitors automate faster, personalize better, and uncover insights -— while you watch from behind.",
     notification: "Falling behind!",
     type: "quality",
   },
@@ -489,7 +489,7 @@ const GoldmineSection: React.FC = () => {
   return (
     <section className="py-20 relative bg-white">
       <div className="container mx-auto px-4">
-        <AnimatedSection className="text-center mb-12">
+        <AnimatedSection className="text-center mb-8 md:mb-12">
           <div className="flex items-center justify-center">
             <h2 className="text-2xl md:text-4xl font-light max-w-lg md:max-w-4xl text-gray-800">
               Your Data is Your Goldmine —
@@ -506,7 +506,7 @@ const GoldmineSection: React.FC = () => {
           </p>
         </AnimatedSection>
 
-        <div className="flex-col justify-center md:px-6 flex  md:flex-row items-center gap-12 mt-28 mx-6">
+        <div className="flex-col justify-center md:px-6 flex  md:flex-row items-center gap-12 mt-24 md:mt-28 mx-6">
           <div className="w-full  md:w-2/3 relative">
             <AnimatedSection delay={300}>
               <CustomAnimation 
@@ -516,16 +516,16 @@ const GoldmineSection: React.FC = () => {
               />
             </AnimatedSection>
 
-            <AnimatedSection delay={800} className="absolute -top-4 -right-4">
+            {/* <AnimatedSection delay={800} className="absolute -top-4 -right-4">
               <div className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium shadow-lg animate-bounce">
                 {slides[currentSlide].notification}
               </div>
-            </AnimatedSection>
+            </AnimatedSection> */}
           </div>
 
           <div className="text-left">
             <AnimatedSection delay={600}>
-              <h3 className="text-3xl font-semibold text-gray-800 mb-4">
+              <h3 className="text-base font-semibold text-gray-800 mb-4">
                 {slides[currentSlide].title.split(" ")[0]}{" "}
                 <span className="text-red-500">
                   {slides[currentSlide].title.split(" ")[1]}
