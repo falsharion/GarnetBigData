@@ -3,17 +3,9 @@ import { motion } from "framer-motion";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import React from "react";
 import Button from "./Button";
+import { FormattedArticle } from "../../lib/mediumFetch";
 
-interface Article {
-  title: string;
-  desc: string;
-  date: string;
-  reads: string;
-  img: string;
-  link: string;
-}
-
-const ArticleCard: React.FC<{ article: Article; idx: number }> = ({ article, idx }) => {
+const ArticleCard: React.FC<{ article: FormattedArticle; idx: number }> = ({ article, idx }) => {
   // Pre-calculate animation delays to avoid runtime calculations
   const delays = {
     title: 0.1 + idx * 0.1,
@@ -60,6 +52,10 @@ const ArticleCard: React.FC<{ article: Article; idx: number }> = ({ article, idx
             transition={{ duration: 0.3 }}
             loading="lazy"
             decoding="async"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.src = process.env.NEXT_PUBLIC_DEFAULT_ARTICLE_IMAGE || '/default-article-image.jpg';
+            }}
           />
         </div>
 

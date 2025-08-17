@@ -498,7 +498,7 @@ const GoldmineSection: React.FC = () => {
               </span>
             </h2>
           </div>
-          <p className="mt-4 text-xs md:text-base px-5 text-gray-500 max-w-2xl md:max-w-4xl mx-auto">
+          <p className="mt-4 text-sm md:text-base px-5 leading-relaxed text-gray-500 max-w-2xl md:max-w-4xl mx-auto">
             Most organizations are sitting on treasure troves of untapped data
             potential. Siloed departments, inconsistent storage, and limited
             employee data literacy are costing you more than inefficiency —
@@ -525,7 +525,7 @@ const GoldmineSection: React.FC = () => {
 
           <div className="text-left">
             <AnimatedSection delay={600}>
-              <h3 className="text-base font-semibold text-gray-800 mb-4">
+              <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">
                 {slides[currentSlide].title.split(" ")[0]}{" "}
                 <span className="text-red-500">
                   {slides[currentSlide].title.split(" ")[1]}
