@@ -8,6 +8,7 @@ interface SectionHeaderProps {
   highlight?: string;
   vectorPosition?: "left" | "right";
   sectionId?: string;
+  enableYoutubeLink?: boolean; // New prop
 }
 
 const SectionHeader: React.FC<SectionHeaderProps> = ({ 
@@ -15,17 +16,26 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
   subtitle, 
   highlight,
   vectorPosition = "right",
-  sectionId
+  sectionId,
+  enableYoutubeLink = false // Default to false
 }) => {
   // Function to handle the YouTube link click
   const handleYoutubeClick = () => {
     window.open('https://youtube.com/@garnetbigdata?feature=shared', '_blank');
   };
 
-  // Process the subtitle to make "catch up on past events" clickable
+  // Process the subtitle
   const renderSubtitle = () => {
+    if (!enableYoutubeLink) {
+      return subtitle;
+    }
+
     const youtubeLinkText = "catch up on past events";
     const parts = subtitle.split(youtubeLinkText);
+
+    if (parts.length === 1) {
+      return subtitle;
+    }
 
     return (
       <>

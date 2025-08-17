@@ -161,6 +161,7 @@ const ResourcesPage: React.FC = () => {
             highlight="Insights"
             subtitle="Explore the latest insights, guides, and thought leadership on data strategy, business intelligence, and more."
             sectionId="blog"
+             enableYoutubeLink={false} // Explicitly disabled
           />
          
           <ScrollAnimationTrigger id="blog-articles">
@@ -196,6 +197,7 @@ const ResourcesPage: React.FC = () => {
             subtitle="Join our upcoming sessions or catch up on past events to learn directly from experts and industry leaders, where we dive into what works, what's next, and how to lead with data in any industry."
             vectorPosition="left"
             sectionId="webinars-events"
+             enableYoutubeLink={true} // Explicitly enabled
           />
 
           <EventsSection events={events} isLoading={isLoadingEvents} />
