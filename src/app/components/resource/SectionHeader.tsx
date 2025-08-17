@@ -19,7 +19,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
 }) => {
   // Function to handle the YouTube link click
   const handleYoutubeClick = () => {
-    window.open('https://youtube.com/your-channel', '_blank');
+    window.open('https://youtube.com/@garnetbigdata?feature=shared', '_blank');
   };
 
   // Process the subtitle to make "catch up on past events" clickable
